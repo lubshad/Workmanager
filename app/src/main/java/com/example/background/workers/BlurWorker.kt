@@ -25,6 +25,8 @@ class BlurWorker(context: Context, workerParams: WorkerParameters) : Worker(cont
 
         makeStatusNotification("Blurring image", appContext)
 
+        sleep()
+
         return try {
 
 
