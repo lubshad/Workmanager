@@ -39,6 +39,7 @@ class SaveImageToFileWorker(context: Context, workerParams: WorkerParameters) : 
         return try {
 
             val imageUri = inputData.getString(KEY_IMAGE_URI)
+            Log.e(TAG, imageUri.toString())
             if (imageUri.isNullOrEmpty()) {
                 Log.e(TAG, "invalid input uri")
                 throw IllegalArgumentException("invalid input uri")
